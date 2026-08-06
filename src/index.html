@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#05070f" />
+<meta name="description" content="Curio: cambia unos minutos de distraccion por una idea que valga la pena explorar." />
+<title>Curio — Cambia la distraccion por una idea</title>
+<style>/*__CSS__*/</style>
+</head>
+<body>
+<div id="root"></div>
+<div id="fallback">Cargando Curio…</div>
+<script>/*__JS__*/</script>
+<script>
+  (function () {
+    setTimeout(function () {
+      var f = document.getElementById('fallback');
+      var r = document.getElementById('root');
+      if (!f) return;
+      if (r && r.childNodes.length > 0) { f.parentNode.removeChild(f); }
+      else { f.textContent = 'No se pudo iniciar Curio en este navegador. Proba abrirlo con Chrome, Safari o Firefox actualizados.'; }
+    }, 1500);
+  })();
+</script>
+</body>
+</html>
